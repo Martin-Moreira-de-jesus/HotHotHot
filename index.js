@@ -1,4 +1,4 @@
-
+"use strict";
 import AppNavigation from "./lib/Observers/AppNavigation.js";
 import NavBar from "./lib/Subjects/NavBar.js";
 import Sensors from "./lib/Subjects/Sensors.js";
