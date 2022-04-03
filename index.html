@@ -93,12 +93,15 @@
                 <!--<button class="custom-btn hiddendiv" value="next">Suivant></button>-->
             </div>
         </div>
-        <canvas id="myChart" width="400" height="400">
-
-        </canvas>
+        <div>
+            <canvas id="myChart" width="400" height="400" style="">
+                <script src="node_modules/chart.js/dist/chart.js"></script>
+                <script src="lib/Scripts/ChartHandler.js"></script>
+            </canvas>
+        </div>
     </section>
 
-    <section id="about" class="active">
+    <section id="about">
         <h2 class="black-text center title">Acteurs du projet</h2>
         <div class="row" style="padding-bottom: 20px;">
             <div class="col l4 m6 s12">
@@ -247,8 +250,11 @@
         </div>
     </section>
 
-    <section id="download" class="row">
-        <button class="col s12 custom-btn">Cliquez ici pour télécharger (ne fonctionne pas)</button>
+    <section id="download">
+        <h2 class="black-text center title">Télécharger</h2>
+        <div class="row">
+            <button class="col s12 custom-btn">Cliquez ici pour télécharger (ne fonctionne pas)</button>
+        </div>
     </section>
 </main>
 

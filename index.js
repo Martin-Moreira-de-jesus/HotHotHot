@@ -11,6 +11,7 @@ import SortButtons from "./lib/Subjects/SortButtons.js";
 import TableEntries from "./lib/Subjects/TableEntries.js";
 import HistoricSortedCallback from "./lib/Subjects/HistoricSortedCallback.js";
 import AlertHandler from "./lib/Observers/AlertHandler.js";
+import ChartHandler from "./lib/Observers/ChartHandler.js";
 
 /*
     Subjects
@@ -53,3 +54,4 @@ sortButtons.attach(sorter);
 tableEntries.attach(sorter);
 
 historicSortedCallback.attach(pagination);
+
