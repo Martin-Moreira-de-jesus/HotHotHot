@@ -152,36 +152,36 @@
         <h2 class="black-text center title">Fonctionnalités</h2>
         <ul class="collection">
             <li class="collection-item">
-                Application à page unique avec un système d'onglets pour se diriger vers les différentes sections
+                Application à page unique avec un système d'onglets pour se diriger vers les différentes sections.
             </li>
             <li class="collection-item">
-                Communication avec le web service à l'aide de requêtes fetch et d'une WebSocket si possible
+                Communication avec le web service à l'aide de requêtes fetch (code du web socket inclus mais non utilisé car celui-ci ne fonctionne pas bien).
             </li>
             <li class="collection-item">
-                Affichage des dernières valeures du capteur en temps réel avec affichage des valeurs minimales et maximales
+                Affichage des dernières valeures du capteur en temps réel avec affichage des valeurs minimales et maximales.
             </li>
             <li class="collection-item">
-                Affichage d'un historique des mesures
+                Affichage d'un historique des mesures. Ainsi que d'un graphique représentant la moyenne des mesures par journées (difficile de l'utiliser sans avoir fait fonctionner l'application à des jours différents.
             </li>
             <li class="collection-item">
-                Historique des mesures triable par température, type de capteur ou date
+                Historique des mesures triable par température, type de capteur ou date.
             </li>
             <li class="collection-item">
-                Historique des mesures paginé pour éviter les surcharges
+                Historique des mesures paginé pour éviter les surcharges.
             </li>
             <li class="collection-item">
-                Mise en cache des données de l'historique et des valeures minimale et maximale des températures pour les recharger au lancement de l'application
+                Mise en cache des données de l'historique et des valeurs minimale et maximale des températures pour les recharger au lancement de l'application
             </li>
             <li class="collection-item">
-                Webworker téléchargeable mais bouton pour le télécharger non implémenté malheuresement
+                Webworker téléchargeable, mais bouton pour le télécharger non implémenté malheuresement.
             </li>
         </ul>
         <h2 class="black-text center title">Gestion de projet</h2>
         <p>
             Notre équipe a décidé d'être agile comme indique les rôles attribués dans la section Acteurs du projet. <br>
-            Nous fonctionnions par rushs de deux semaines (8h par rush donc) et nous faisions des retrospectives à la fin de chacun en demandant à Mr. Eng son avis sur notre site. <br>
+            Nous fonctionnions par rushs de deux semaines (8h par rush donc) et nous faisions des retrospectives à la fin de chacun en demandant à Mr. Eng son avis sur notre site (il jouait donc le rôle du client). <br>
             Nous avons évidemment utilisé git avec une branche par personne. La plupart du temps, nous avons formé des petits groupes de deux personnes pour travailler.
-            Nous avons utilisé "Klaxoon", une application web pour réaliser nos Kanban et restrospectives <br>
+            Nous avons utilisé "Klaxoon", une application web pour réaliser nos Kanban et retrospectives <br>
             Nous avions donc notre liste des tâches à faire, une liste des tâches en cours puis une liste des tâches faites, cela nous a fait gagner beaucoup de temps.
         </p>
         <h2 class="black-text center title">Difficultés</h2>
@@ -194,6 +194,12 @@
             </li>
             <li class="collection-item">
                 Au même titre que le mode strict, nous avons utilisé le design pattern Sujet Observeur pour le projet. Cependant, cela s'est fait bien après que nous avions fini. Ainsi la transition à été très difficile, mais les avantages sont les mêmes que le mode strict.
+            </li>
+            <li class="collection-item">
+                Il nous a été impossible d'implémenter le chart en utilisant le design pattern Sujet Observeur. Nous avions du mal à inclure la librairie avec le mode strict ES5. Il est quand même possible de l'utiliser car nous l'avons implémenté séparément.
+            </li>
+            <li class="collection-item">
+                Nous n'avons également pas réussi à mettre un bouton permettant de télécharger le web-worker.
             </li>
         </ul>
     </section>
