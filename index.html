@@ -25,6 +25,8 @@
             <li class="tab"><a href="#sensors">Capteurs</a></li>
             <li class="tab"><a href="#historic">Historique</a></li>
             <li class="tab"><a href="#about">À propos</a></li>
+            <li class="tab"><a href="#account">Compte</a></li>
+            <li class="tab"><a href="#download">Télécharger</a></li>
         </ul>
     </div>
 </nav>
@@ -96,12 +98,12 @@
         </canvas>
     </section>
 
-    <section id="about">
+    <section id="about" class="active">
         <h2 class="black-text center title">Acteurs du projet</h2>
         <div class="row" style="padding-bottom: 20px;">
             <div class="col l4 m6 s12">
                 <div class="center-align">
-                    <img src="images/gauge.png" alt="" class="card-image" width="128" height="128"
+                    <img src="images/team/rat.jpg" alt="" class="card-image" width="128" height="128"
                          style="border-radius: 50%;">
                     <h4>MOREIRA DE JESUS Martin</h4>
                     <h5>Scrum Master</h5>
@@ -109,7 +111,7 @@
             </div>
             <div class="col l4 m6 s12">
                 <div class="center-align">
-                    <img src="images/gauge.png" alt="" class="card-image" width="128" height="128"
+                    <img src="images/team/barrywhite.jpg" alt="" class="card-image" width="128" height="128"
                          style="border-radius: 50%;">
                     <h4>SYMPHORIEN Mathieu</h4>
                     <h5>Product owner</h5>
@@ -117,7 +119,7 @@
             </div>
             <div class="col l4 m6 s12">
                 <div class="center-align">
-                    <img src="images/gauge.png" alt="" class="card-image" width="128" height="128"
+                    <img src="images/team/manouche.jpg" alt="" class="card-image" width="128" height="128"
                          style="border-radius: 50%;">
                     <h4>TEODORESCO Pierre</h4>
                     <h5>Dev</h5>
@@ -128,7 +130,7 @@
             <div class="flexbox">
                 <div class="col l6 m6 s12">
                     <div class="center-align">
-                        <img src="images/gauge.png" alt="" class="card-image" width="128" height="128"
+                        <img src="images/team/stormtrooper.jpg" alt="" class="card-image" width="128" height="128"
                              style="border-radius: 50%;">
                         <h4>SEIGNOBOS Louis</h4>
                         <h5>Dev</h5>
@@ -136,7 +138,7 @@
                 </div>
                 <div class="col l6 m6 s12">
                     <div class="center-align">
-                        <img src="images/gauge.png" alt="" class="card-image" width="128" height="128"
+                        <img src="images/team/coiffeur.jpg" alt="" class="card-image" width="128" height="128"
                              style="border-radius: 50%;">
                         <h4>WROBEL Nicolas</h4>
                         <h5>Dev</h5>
@@ -168,12 +170,85 @@
                 Mise en cache des données de l'historique et des valeures minimale et maximale des températures pour les recharger au lancement de l'application
             </li>
             <li class="collection-item">
-                Webworker
+                Webworker téléchargeable mais bouton pour le télécharger non implémenté malheuresement
             </li>
         </ul>
         <h2 class="black-text center title">Gestion de projet</h2>
+        <p>
+            Notre équipe a décidé d'être agile comme indique les rôles attribués dans la section Acteurs du projet. <br>
+            Nous fonctionnions par rushs de deux semaines (8h par rush donc) et nous faisions des retrospectives à la fin de chacun en demandant à Mr. Eng son avis sur notre site. <br>
+            Nous avons évidemment utilisé git avec une branche par personne. La plupart du temps, nous avons formé des petits groupes de deux personnes pour travailler.
+            Nous avons utilisé "Klaxoon", une application web pour réaliser nos Kanban et restrospectives <br>
+            Nous avions donc notre liste des tâches à faire, une liste des tâches en cours puis une liste des tâches faites, cela nous a fait gagner beaucoup de temps.
+        </p>
         <h2 class="black-text center title">Difficultés</h2>
-        <h2 class="black-text center title">Si on devait recommencer</h2>
+        <ul class="collection">
+            <li class="collection-item">
+                Comme le web socket ne fonctionnait pas à merveille, nous avons commenté le code le concernant et utilisé des requêtes fetch.
+            </li>
+            <li class="collection-item">
+                Nous avons utilisé le mode strict de ECMA5 pour le code. Celui-ci a été très difficile à prendre en main. Cependant, son utilisation a augmenté la qualité du code et à faciliter le refactoring. De plus, cela nous évitait des comportements inattendus propres à Javascript.
+            </li>
+            <li class="collection-item">
+                Au même titre que le mode strict, nous avons utilisé le design pattern Sujet Observeur pour le projet. Cependant, cela s'est fait bien après que nous avions fini. Ainsi la transition à été très difficile, mais les avantages sont les mêmes que le mode strict.
+            </li>
+        </ul>
+    </section>
+
+    <section id="account">
+        <h2 class="black-text center title">Compte</h2>
+        <div class="row">
+            <div class="col s12">
+                <h4 class="col s12 black-text center title">Connexion</h4>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="connection-password" type="password" class="validate">
+                        <label for="connection-password">Mot de passe</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="connection-email" type="email" class="validate">
+                        <label for="connection-email">Email</label>
+                    </div>
+                </div>
+                <button id="submit-connection" class="col l12 s12">Connexion</button>
+            </div>
+            <div class="col l12 s12" style="margin-top: 20px;">
+                <h4 class="col s12 black-text center title">Inscription</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first_name" type="text" class="validate">
+                                <label for="first_name">Prenom</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Nom</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Mot de passe</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                    </form>
+                    <button class="col s12" id="submit-register">S'inscrire</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="row">
+        <button class="col s12 custom-btn">Cliquez ici pour télécharger (ne fonctionne pas)</button>
     </section>
 </main>
 
